@@ -1,0 +1,63 @@
+buildscript {
+    ext.kotlin_version = "1.7.0"
+    ext.indicator_version = "1.0.3"
+    //ext.hilt_version = '2.38.1'
+    ext.nav_version = '2.5.0'
+
+    ext {
+        hilt_version = '2.40.5'
+    }
+
+    repositories {
+        // other repositories...
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.google.dagger:hilt-android-gradle-plugin:2.40.5'
+        classpath 'com.google.gms:google-services:4.3.15'
+        //classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.4'
+        // Add this line into `dependencies` in `buildscript`
+        //classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.12.9, 0.99.99]'
+        //classpath 'com.amplifyframework:amplify-tools-gradle-plugin:1.0.2'
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+        //classpath 'com.github.jengelman.gradle.plugins:shadow:6.1.0'
+
+    }
+
+}
+
+
+plugins {
+    id 'com.android.application' version '8.0.0' apply false
+    id 'com.android.library' version '8.0.0' apply false
+    id 'org.jetbrains.kotlin.android' version '1.8.10' apply false
+
+}
+
+allprojects {
+    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+        kotlinOptions {
+            jvmTarget = "1.8"
+        }
+    }
+}
+
+/*allprojects {
+
+
+    afterEvaluate {
+        tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+            kotlinOptions {
+                useIR = true
+                if (configurations.findByName("kotlinCompilerPluginClasspath")
+                        ?.dependencies
+                        ?.any { it.group == "androidx.compose.compiler" } == true) {
+                    freeCompilerArgs += listOf(
+                            "-P", "plugin:androidx.compose.compiler.plugins.kotlin:suppressKotlinVersionCompatibilityCheck=true"
+                    )
+                }
+            }
+        }
+    }
+}*/
