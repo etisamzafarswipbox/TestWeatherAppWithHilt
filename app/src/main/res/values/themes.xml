@@ -2,4 +2,15 @@
 <resources>
 
     <style name="Theme.WeatherTestApp" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <!-- res/values/styles.xml -->
+    <style name="CustomPopupTheme" parent="@style/Widget.AppCompat.Spinner.DropDown">
+        <item name="android:popupBackground">@android:color/white</item> <!-- Set your desired background color for the dropdown -->
+        <item name="android:popupElevation">8dp</item> <!-- Set your desired elevation for the dropdown -->
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="SpinnerTheme" parent="android:Widget.Spinner">
+        <item name="android:background">@drawable/custom_spinner_background</item>
+    </style>
 </resources>

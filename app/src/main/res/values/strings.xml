@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">TestWeatherApp</string>
+    <string name="city_name_instruction">Enter City Name</string>
+    <string name="empty_weather_text">--/--</string>
+    <string name="date">Date</string>
+    <string name="description">Description</string>
+    <string name="temperature">Temperature</string>
+    <string name="search">Search</string>
+    <string name="weather_image">Weather image</string>
+    <string-array name="unit_choices">
+        <item>Fahrenheit</item>
+        <item>Celsius</item>
+    </string-array>
+
 </resources>
