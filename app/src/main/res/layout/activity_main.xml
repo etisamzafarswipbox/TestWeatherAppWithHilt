@@ -15,6 +15,7 @@
         android:id="@+id/locationEditText"
         android:layout_width="0dp"
         android:inputType="text"
+        android:autofillHints="postalAddress"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/_5sdp"
         android:background="@drawable/edittext_background"
@@ -60,17 +61,6 @@
         android:entries="@array/unit_choices"
         android:layout_marginTop="@dimen/_1sdp" />
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:indeterminateTint="@color/teal_700"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 
     <TextView
@@ -169,6 +159,17 @@
         app:layout_constraintGuide_begin="180dp"
         app:layout_constraintGuide_percent="0.08" />
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/teal_700"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 
